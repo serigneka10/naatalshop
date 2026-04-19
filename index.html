@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>NaatalShop</title>
+</head>
+
+
+
+<body class="">
+  <header
+    class="fixed w-full flex justify-between items-center bg-green-600 text-white shadow-[0_10px_15px_-5px_rgba(0,0,0,0.4)]">
+
+    <!-- LOGO -->
+    <div>
+      <h1 class="text-2xl font-bold m-4 p-4 ">NaatalShop</h1>
+    </div>
+
+    <!-- NAV -->
+    <nav id="nav" class="fixed top-0 right-0 h-full w-2/3 bg-green-700 text-black p-6
+              transform translate-x-full transition-transform duration-300
+              md:static md:translate-x-0 md:flex md:bg-transparent md:text-white md:h-auto md:w-auto">
+
+      <ul class="flex flex-col gap-6 md:flex-row md:space-x-4 md:gap-0">
+        <li><a href="#Fonctionnalités" class="text-white text-sm hover:text-black">Fonctionnalités</a></li>
+        <li><a href="#Contact" class="text-white text-sm hover:text-black">Contact</a></li>
+        <li><a href="#Connexion" class="bg-white text-black px-4 py-2 rounded-2xl text-sm font-bold">Connexion</a></li>
+      </ul>
+    </nav>
+
+    <!-- HAMBURGER -->
+    <div id="hamb" class="md:hidden text-3xl cursor-pointer z-50 mr-2">
+      ☰
+    </div>
+
+  </header>
+
+  <script>
+    let hamb = document.getElementById('hamb');
+    let nav = document.getElementById('nav');
+
+    let open = false;
+
+    hamb.addEventListener('click', function () {
+      open = !open;
+
+      if (open) {
+        nav.classList.remove('translate-x-full');
+      } else {
+        nav.classList.add('translate-x-full');
+      }
+    });
+  </script>
+
+  <section class="flex flex-col justify-center items-center gap-24 pt-16 px-4 md:flex md:flex-row ">
+
+    <div class="py-16 flex flex-col items-center justify-center  gap-8 px-2 md:py-36">
+      <div class="  text-center max-w-2xl gap-6 ">
+        <h2 class="text-5xl font-extrabold tracking-normal">Bienvenue Sur <span class="text-green-600">NaatalShop</span> </h2>
+        <p class="text-2xl text-gray-900 my-8">NaatalShop est une application de gestion de boutique conçue pour aider les commerçants à suivre facilement leurs ventes et les crédits des clients</p>
+      </div>
+
+      <div class="flex flex-col gap-3 md:flex-row">
+
+        <a href="#"
+          class="bg-green-600 text-white w-full md:w-auto px-6 md:px-8 py-3 rounded-lg text-2xl font-bold text-center transition-all duration-300 hover:scale-105">
+          Commencer Maintenant
+        </a>
+
+        <a href="#"
+          class="border-2 border-gray-600 text-black w-full md:w-auto px-6 md:px-4 py-3 rounded-lg text-2xl font-bold text-center transition-all duration-300 hover:scale-105">
+          Nous Contacter
+        </a>
+
+      </div>
+    </div>
+
+
+    <div><img class="w-80 rounded-2xl transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+        src="img acceuil.jpeg" alt="">
+    </div>
+
+  </section>
+
+  <!-- img  -->
+  <div class=" bg-green-100 rounded-2xl m-6 p-6  mt-12  md:flex-row items-center justify-center">
+    <img class="w-full  m-3 p-4 transition-all duration-300  hover:scale-90" src="carte.png" alt="Carte du Sénégal">
+    <img class="w-full  m-3 p-4 transition-all duration-300  hover:scale-90" src="carte.png" alt="Carte du Sénégal">
+
+  </div>
+
+
+<!-- Fonctionnalités -->
+  <section id="Fonctionnalités" class="mt-16 p-6 gap-6">
+    <p class="font-bold text-black text-center text-3xl">Fonctionnalités</p>
+    <p class="text-center m-2.5">Tout ce dont vous avez besoin pour gérer efficacement votre boutique</p>
+
+    <div class=" bg-green-600 py-4 rounded-2xl flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
+
+
+      <div class="bg-white w-90 rounded-2xl p-6 m-6 text-center transition-all duration-300 hover:scale-105 md:w-96">
+        <a href=""><i class="fa-solid fa-users text-4xl" style="color: rgb(7, 225, 86);"></i></a>
+        <h2 class="font-bold">Suivi des ventes en temps réel</h2>
+        <p class="pt-3 text-sm"> Chaque transaction est enregistrée automatiquement pour voir combien <br> tu gagnes chaque jour
+        </p>
+      </div>
+
+
+      <div class="bg-white w-90 p-6 rounded-2xl m-6  text-center transition-all duration-300 hover:scale-105 md:w-96">
+        <a href=""><i class="fa-solid fa-layer-group text-4xl" style="color: rgb(7, 225, 86);"></i></a>
+        <h2 class="font-bold"> Gestion des produits et du stock</h2>
+        <p class="text-sm pt-3">Ajoute tes produits, modifie les prix et surveille ton stock facilement. Reçois une alerte quand un produit
+          est presque en rupture de stock.</p>
+      </div>
+
+      <div class="bg-white w-90 p-6 rounded-2xl m-6 text-center transition-all duration-300 hover:scale-105 md:w-96">
+        <a href=""><i class="fa-solid fa-user text-4xl" style="color: rgb(7, 225, 86);"></i></a>
+        <h2 class="font-bold"> Gestion des clients</h2>
+        <p class="text-sm pt-3">Enregistre tes clients, garde leurs contacts et suis leurs achats pour mieux les fidéliser fidéliser..</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- contact -->
+  <section id="Contact" class="m-6 p-6 gap-12">
+    <div class="flex flex-col justify-center items-center">
+      <h1 class="text-3xl font-bold">Contactez-nous</h1>
+      <p class="text-xs">une question ? N'hésitez pas à nous contacter !</p>
+
+    </div>
+    <div class="mt-6 bg-green-600 p-6 rounded-2xl flex flex-col justify-center items-center gap-6 md:gap-12 ">
+      <div class="flex flex-col md:flex-row gap-4">
+        <div class="flex flex-col">
+
+          <label class="text-white" for="name">Votre nom complet</label>
+          <input type="text" id="name" placeholder="Votre nom complet"
+            class="border border-green-500  rounded-lg px-4 py-3 w-full mb-4 mt-1.5">
+        </div>
+
+        <div>
+          <label class="text-white" for="email">Votre adresse email</label>
+          <input type="email" id="email" placeholder="Votre adresse email"
+            class="border border-green-500 text-white rounded-lg px-4 py-3 w-full mb-4 mt-1.5">
+        </div>
+
+      </div>
+
+      <textarea placeholder="Votre message" class="border border-green-400 rounded-lg px-4 py-2 w-full mb-4"></textarea>
+      <button
+        class="flex justify-center border-2 border-white text-white px-12 py-3 rounded-lg text-xl font-bold transition-all duration-300 hover:scale-95 md:w-full">Envoyer</button>
+
+    </div>
+
+  </section>
+
+
+  <footer class="bg-black text-gray-300 pt-16 pb-8 px-6 md:px-20">
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+      <!-- BRAND -->
+      <div>
+        <h2 class="text-white text-2xl font-bold">Naatal <span class="text-green-600 underline">Shop</span></h2>
+        <p class="mt-4 text-sm text-gray-400">
+          Solution complète de gestion pour votre boutique. Moderne, simple et efficace
+        </p>
+      </div>
+
+      <!-- LIENS -->
+      <div class="gap-12">
+        <h2 class="font-bold">Contact</h2>
+        <H3 class="font-bold text-green-600">Email</H3>
+        <p class="text-sm font-bold">contact@naatalshop.com</p>
+        <H3 class="font-bold text-green-600">WhatsApp</H3>
+        <p class="text-sm font-bold">+221 77 947 88 24</p>
+         <!-- CTA -->
+        <a href="https://wa.me/221779478824?text=Bonjour%20je%20veux%20commander%20une%20carte%20k-link"
+          target="_blank">
+         
+        </a>
+        <a href=""><i class="fa-brands fa-whatsapp transition transform hover:scale-110 duration-300 text-4xl mt-3" style="color: rgb(7, 225, 86);"></i></a>
+      </div>
+
+      <!-- SERVICES -->
+      <div>
+
+      </div>
+
+      <!-- CONTACT -->
+      <div id="contact gap-12">
+        <h3 class=" text-green-500 font-bold text">Liens utiles</h3>
+        <p class="text-sm">Mentions légales</p>
+        <p class="text-sm mt-2">Conditions d'utilisation</p>
+        <a href=""><i class="fa-brands fa-tiktok mt-3 text-3xl" style="color: rgb(7, 225, 86);"></i></a>
+
+
+
+      </div>
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-white">
+      © 2026 Naatal Shop. Tous droits réservés.
+    </div>
+
+  </footer>
+
+
+
+</body>
+
+</html>
