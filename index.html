@@ -11,28 +11,32 @@
   <title>NaatalShop</title>
 </head>
 
-
-
 <body class="">
-  <header
-    class="fixed w-full flex justify-between items-center bg-green-600 text-white shadow-[0_10px_15px_-5px_rgba(0,0,0,0.4)]">
+  <header class=" fixed w-full flex justify-between items-center bg-green-600 text-white inline-lg shadow-2xl">
 
     <!-- LOGO -->
     <div>
-      <h1 class="text-2xl font-bold m-4 p-4 ">NaatalShop</h1>
+      <h1 class="text-3xl font-bold m-4 p-4 ">Naatal <span class="text-black">Shop</span></h1>
     </div>
 
     <!-- NAV -->
-    <nav id="nav" class="fixed top-0 right-0 h-full w-2/3 bg-green-700 text-black p-6
-              transform translate-x-full transition-transform duration-300
-              md:static md:translate-x-0 md:flex md:bg-transparent md:text-white md:h-auto md:w-auto">
+   <nav id="nav" class="fixed top-0 right-0 w-64 bg-slate-900 rounded-xl text-white p-4
+  transform translate-x-full transition-transform duration-300
+  md:static md:translate-x-0 md:flex md:bg-transparent md:text-white md:h-auto md:w-auto
+  max-h-screen overflow-y-auto mt-5 mr-1">
+      <div class="flex flex-col gap-6 md:flex-row md:items-center md:gap-6">
+       
+        <ul class="flex flex-col  gap-6 md: md:flex-row md:space-x-4 md:gap-0 ">
+           <li><a href="#Contact" class="text-white text-xl hover:bg-black py-1.5 px-4 rounded-3xl font-bold">Accueil</a></li>
+          <li><a href="#Fonctionnalités" class="text-white text-xl font-bold hover:bg-black py-1.5 px-4 rounded-3xl ">Fonctionnalités</a></li>
+          <li><a href="#Contact" class="text-white text-xl hover:bg-black py-1.5 px-4 rounded-3xl font-bold">Contact</a></li>
+        </ul>
 
-      <ul class="flex flex-col gap-6 md:flex-row md:space-x-4 md:gap-0">
-        <li><a href="#Fonctionnalités" class="text-white text-sm hover:text-black">Fonctionnalités</a></li>
-        <li><a href="#Contact" class="text-white text-sm hover:text-black">Contact</a></li>
-        <li><a href="#Connexion" class="bg-white text-black px-4 py-2 rounded-2xl text-sm font-bold">Connexion</a></li>
-      </ul>
+        <a href="#Connexion" class="bg-white text-green-600 px-3.5 py-2 rounded text-xl font-bold flex justify-center cursor-pointer shadow-2xl">Connexion</a>
+      </div>
+
     </nav>
+    <div id="overlay" class="fixed inset-0 hidden z-40"></div>
 
     <!-- HAMBURGER -->
     <div id="hamb" class="md:hidden text-3xl cursor-pointer z-50 mr-2">
@@ -41,29 +45,16 @@
 
   </header>
 
-  <script>
-    let hamb = document.getElementById('hamb');
-    let nav = document.getElementById('nav');
-
-    let open = false;
-
-    hamb.addEventListener('click', function () {
-      open = !open;
-
-      if (open) {
-        nav.classList.remove('translate-x-full');
-      } else {
-        nav.classList.add('translate-x-full');
-      }
-    });
-  </script>
+ 
 
   <section class="flex flex-col justify-center items-center gap-24 pt-16 px-4 md:flex md:flex-row ">
 
     <div class="py-16 flex flex-col items-center justify-center  gap-8 px-2 md:py-36">
       <div class="  text-center max-w-2xl gap-6 ">
-        <h2 class="text-5xl font-extrabold tracking-normal">Bienvenue Sur <span class="text-green-600">NaatalShop</span> </h2>
-        <p class="text-2xl text-gray-900 my-8">NaatalShop est une application de gestion de boutique conçue pour aider les commerçants à suivre facilement leurs ventes et les crédits des clients</p>
+        <h2 class="text-5xl font-extrabold tracking-normal">Bienvenue Sur <span class="text-green-600">NaatalShop</span>
+        </h2>
+        <p class="text-2xl text-gray-900 my-8">NaatalShop est une application de gestion de boutique conçue pour aider
+          les commerçants à suivre facilement leurs ventes et les crédits des clients</p>
       </div>
 
       <div class="flex flex-col gap-3 md:flex-row">
@@ -89,14 +80,14 @@
   </section>
 
   <!-- img  -->
-  <div class=" bg-green-100 rounded-2xl m-6 p-6  mt-12  md:flex-row items-center justify-center">
+  <!-- <div class=" bg-green-100 rounded-2xl m-6 p-6  mt-12  md:flex-row items-center justify-center">
     <img class="w-full  m-3 p-4 transition-all duration-300  hover:scale-90" src="carte.png" alt="Carte du Sénégal">
     <img class="w-full  m-3 p-4 transition-all duration-300  hover:scale-90" src="carte.png" alt="Carte du Sénégal">
 
-  </div>
+  </div> -->
 
 
-<!-- Fonctionnalités -->
+  <!-- Fonctionnalités -->
   <section id="Fonctionnalités" class="mt-16 p-6 gap-6">
     <p class="font-bold text-black text-center text-3xl">Fonctionnalités</p>
     <p class="text-center m-2.5">Tout ce dont vous avez besoin pour gérer efficacement votre boutique</p>
@@ -107,7 +98,8 @@
       <div class="bg-white w-90 rounded-2xl p-6 m-6 text-center transition-all duration-300 hover:scale-105 md:w-96">
         <a href=""><i class="fa-solid fa-users text-4xl" style="color: rgb(7, 225, 86);"></i></a>
         <h2 class="font-bold">Suivi des ventes en temps réel</h2>
-        <p class="pt-3 text-sm"> Chaque transaction est enregistrée automatiquement pour voir combien <br> tu gagnes chaque jour
+        <p class="pt-3 text-sm"> Chaque transaction est enregistrée automatiquement pour voir combien <br> tu gagnes
+          chaque jour
         </p>
       </div>
 
@@ -115,14 +107,16 @@
       <div class="bg-white w-90 p-6 rounded-2xl m-6  text-center transition-all duration-300 hover:scale-105 md:w-96">
         <a href=""><i class="fa-solid fa-layer-group text-4xl" style="color: rgb(7, 225, 86);"></i></a>
         <h2 class="font-bold"> Gestion des produits et du stock</h2>
-        <p class="text-sm pt-3">Ajoute tes produits, modifie les prix et surveille ton stock facilement. Reçois une alerte quand un produit
+        <p class="text-sm pt-3">Ajoute tes produits, modifie les prix et surveille ton stock facilement. Reçois une
+          alerte quand un produit
           est presque en rupture de stock.</p>
       </div>
 
       <div class="bg-white w-90 p-6 rounded-2xl m-6 text-center transition-all duration-300 hover:scale-105 md:w-96">
         <a href=""><i class="fa-solid fa-user text-4xl" style="color: rgb(7, 225, 86);"></i></a>
         <h2 class="font-bold"> Gestion des clients</h2>
-        <p class="text-sm pt-3">Enregistre tes clients, garde leurs contacts et suis leurs achats pour mieux les fidéliser fidéliser..</p>
+        <p class="text-sm pt-3">Enregistre tes clients, garde leurs contacts et suis leurs achats pour mieux les
+          fidéliser fidéliser..</p>
       </div>
     </div>
 
@@ -161,7 +155,7 @@
   </section>
 
 
-  <footer class="bg-black text-gray-300 pt-16 pb-8 px-6 md:px-20">
+  <footer class="bg-slate-900 text-gray-300 pt-16 pb-8 px-6 md:px-20 m-4 rounded">
 
     <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
 
@@ -180,12 +174,13 @@
         <p class="text-sm font-bold">contact@naatalshop.com</p>
         <H3 class="font-bold text-green-600">WhatsApp</H3>
         <p class="text-sm font-bold">+221 77 947 88 24</p>
-         <!-- CTA -->
+        <!-- CTA -->
         <a href="https://wa.me/221779478824?text=Bonjour%20je%20veux%20commander%20une%20carte%20k-link"
           target="_blank">
-         
+
         </a>
-        <a href=""><i class="fa-brands fa-whatsapp transition transform hover:scale-110 duration-300 text-4xl mt-3" style="color: rgb(7, 225, 86);"></i></a>
+        <a href=""><i class="fa-brands fa-whatsapp transition transform hover:scale-110 duration-300 text-4xl mt-3"
+            style="color: rgb(7, 225, 86);"></i></a>
       </div>
 
       <!-- SERVICES -->
@@ -213,7 +208,35 @@
 
   </footer>
 
+<body>
 
+  <!-- TON SITE -->
+  <header>
+    ...
+  </header>
+
+  <section>
+    ...
+  </section>
+
+  <!-- SCRIPT -->
+  <script>
+    const hamb = document.getElementById("hamb");
+    const nav = document.getElementById("nav");
+    const overlay = document.getElementById("overlay");
+
+    hamb.addEventListener("click", () => {
+      nav.classList.remove("translate-x-full");
+      overlay.classList.remove("hidden");
+    });
+
+    overlay.addEventListener("click", () => {
+      nav.classList.add("translate-x-full");
+      overlay.classList.add("hidden");
+    });
+  </script>
+
+</body>
 
 </body>
 
